@@ -6,6 +6,7 @@ Remember you need to have the following installed,
 - xmobar
 - zsh (and powerline)
 - terminator
+- compton (For terminal transparency)
 
 And for your own sake, autojump
 
