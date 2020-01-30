@@ -1,0 +1,2 @@
+#set background image with feh
+feh --bg-scale Pictures/wallpapers/kilimanjaro.jpg

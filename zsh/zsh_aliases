@@ -1,0 +1,15 @@
+# Apt
+alias i='sudo apt-get install'
+alias u='sudo apt-get upgrade'
+
+# Git
+alias gp='git pull'
+alias gpu='git push'
+alias ga='git add'
+alias gc='git commit -m'
+alias gs='git status'
+
+function pdf() {
+    firefox $1 &
+    disown
+}
