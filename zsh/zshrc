@@ -1,7 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-echo -e "Everything Is Ok:D
+echo -e "everything is ok:D
        GL&HF" | cowsay -n -f milk | sed -e 's/^/\t\t\t/' | lolcat -s 4.0 -F 0.2
 # Path to your oh-my-zsh installation.
 export ZSH="/home/frederik/.oh-my-zsh"
