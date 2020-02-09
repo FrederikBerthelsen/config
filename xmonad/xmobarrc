@@ -11,7 +11,7 @@ Config {
    -- layout
    , sepChar =  "%"   -- delineator between plugin names and straight text
    , alignSep = "}{"  -- separator between left-right alignment
-   , template = "%battery% | %multicpu% | %coretemp% | %memory% | %myvolume% }{ %EKCH% | %date% || %kbd% "
+   , template = "%battery% | %memory% | %myvolume% | %spotify% |}{ %EKCH% | %date% || %kbd% "
 
    -- general behavior
    , lowerOnStart =     True    -- send to bottom of window stack on start
@@ -96,6 +96,9 @@ Config {
         
         --Volume information
         , Run Com "/bin/bash" ["-c", "~/.xmonad/get-volume.sh"] "myvolume" 10
+
+        --Spotify information
+        , Run Com "/bin/bash" ["-c", "~/.xmonad/spotify.sh -i \"%artist - %title\""] "spotify" 10
 
         -- time and date indicator 
         --   (%F = y-m-d date, %a = day of week, %T = h:m:s time)
