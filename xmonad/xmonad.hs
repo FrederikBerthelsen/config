@@ -33,10 +33,11 @@ myConfig = def
     , manageHook         = manageDocks <+> myManageHook
     , workspaces         = myWorkspaces
     }
-    `additionalKeysP` myKeys
+    `additionalKeysP` myKeysP
+    `additionalKeys` myKeys
 
-myKeys :: [(String, X ())]
-myKeys =
+myKeysP :: [(String, X ())]
+myKeysP =
     [ ("<XF86AudioRaiseVolume>", spawn "amixer -D pulse sset Master 5%+")
     , ("<XF86AudioLowerVolume>", spawn "amixer -D pulse sset Master 5%-")
     , ("<XF86AudioMute>", spawn "amixer -D pulse set Master 1+ toggle")
@@ -45,3 +46,8 @@ myKeys =
     , ("<XF86AudioNext>", spawn "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next")
     , ("<XF86AudioPrev>", spawn "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous")
     ]
+
+myKeys =
+    [ ((0, xK_Print), spawn "scrot ~/Pictures/Screenshots/%Y-%m-%d-%H%M%S.png")
+    , ((mod4Mask, xK_Print), spawn "~/.xmonad/selectScreenshot.sh")
+    , ((mod4Mask .|. shiftMask, xK_Print), spawn "~/.xmonad/selectScreenshotFirefox.sh")

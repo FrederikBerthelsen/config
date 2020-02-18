@@ -1,0 +1,1 @@
+sleep 0.2; scrot -s ~/Pictures/Screenshots/%Y-%m-%d-%H%M%S.png
