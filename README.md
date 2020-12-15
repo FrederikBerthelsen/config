@@ -1,12 +1,17 @@
 # config
-Configs for xmonad, zsh, xmobar and more
+Configs for xmonad/qtile, zsh, xmobar and more
 
-Remember you need to have the following installed,
-- xmonad
-- xmobar
+Remember you need to have the following installed for either xmonad or qtile to work,
 - zsh (and powerline)
 - terminator
 - compton (For terminal transparency)
+
+For xmonad you need to have following installed,
+- xmonad
+- xmobar
+
+And for qtile the following,
+- qtile
 
 And for your own sake, autojump
 
