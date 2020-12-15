@@ -9,6 +9,9 @@ alias ga='git add'
 alias gc='git commit -m'
 alias gs='git status'
 
+# pdfgrep
+alias search='pdfgrep -i -n -R'
+
 function pdf() {
     firefox $1 &
     disown
